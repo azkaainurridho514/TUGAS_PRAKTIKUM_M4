@@ -1,19 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="App Cek Kelulusan Mata Kuliah"
+            android:layout_gravity="center"
+            />
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masukan nama"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/nama"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masukan NIM"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/nim"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masukan Nilai"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/nilai"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <Button
+            android:text="Cek kelulusan MK"
+            android:layout_marginBottom="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Nama"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text=":"
+                android:textStyle="bold"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="-"
+                android:id="@+id/resultNama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="NIM"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text=":"
+                android:textStyle="bold"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="-"
+                android:id="@+id/resultNim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Nilai"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text=":"
+                android:textStyle="bold"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="-"
+                android:id="@+id/resultNilai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Kelulusan"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text=":"
+                android:textStyle="bold"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="-"
+                android:id="@+id/resultKelulusan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
